@@ -23,14 +23,23 @@
       background: #fff;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      min-height: 100vh;
+      height: 100vh;
       font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
       color: #000;
       padding: 20px;
     }
+    .spacer {
+      flex: 1 1 0;
+      width: 100%;
+    }
+    .spacer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     .video-wrap {
+      flex: 0 0 auto;
       width: 100%;
       max-width: 900px;
       aspect-ratio: 16 / 9;
@@ -44,7 +53,6 @@
       display: block;
     }
     #caption {
-      margin-top: 16px;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       font-size: 12px;
       font-weight: 400;
@@ -60,6 +68,7 @@
   </style>
 </head>
 <body>
+  <div class="spacer"></div>
   <div class="video-wrap">
     <iframe
       src="https://www.youtube-nocookie.com/embed/43bMlGA2m-Q?rel=0"
@@ -67,6 +76,8 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen></iframe>
   </div>
-  <p id="caption"><span class="title">Dolce Vita, 2026, Full Movie (4K)</span><br><span class="credit">A Film by Rohan Kadakia, Rights Reserved</span></p>
+  <div class="spacer spacer-bottom">
+    <p id="caption"><span class="title">Dolce Vita, 2026, Full Movie (4K)</span><br><span class="credit">A Film by Rohan Kadakia, Rights Reserved</span></p>
+  </div>
 </body>
 </html>
